@@ -23,7 +23,7 @@ export default function Hero() {
         </a>
 
         <a
-          href="mailto:your-email@example.com"
+          href="mailto:jayden.flitton@outlook.com"
           className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-semibold text-white"
         >
           Contact Me
