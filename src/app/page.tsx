@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import CurrentFocus from "@/components/CurrentFocus";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <Navbar />
       <Hero />
+      <CurrentFocus />
       <Projects />
       <Writing />
       <About />
