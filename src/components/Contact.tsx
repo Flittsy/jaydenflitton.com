@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
+    <section id="contact" className="mx-auto max-w-5xl px-6 pb-16 pt-24">
       <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
         Get in Touch
       </p>
@@ -14,7 +14,7 @@ export default function Contact() {
 
       <a
         href="mailto:jayden.flitton@outlook.com"
-        className="mt-10 inline-block rounded-full border border-zinc-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-zinc-500"
+        className="mt-8 inline-block rounded-full border border-zinc-700 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-zinc-500"
       >
         jayden.flitton@outlook.com
       </a>
