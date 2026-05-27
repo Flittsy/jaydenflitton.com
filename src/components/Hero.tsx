@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6">
       <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-400">
-        Engineering • Finance • Builder
+        Engineering • Finance • Builder • Student
       </p>
 
       <h1 className="max-w-3xl text-5xl font-bold tracking-tight sm:text-7xl">
