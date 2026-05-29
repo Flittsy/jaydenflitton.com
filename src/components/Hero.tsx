@@ -1,42 +1,65 @@
+import Image from "next/image";
+
+const profile = {
+  name: "Jayden Flitton",
+  tagline: "Engineering • Finance • Builder • Student",
+  intro:
+    "I am building a portfolio of engineering projects, business analysis, and ideas at the intersection of technology, energy, and finance.",
+  imageSrc: "/profile.png",
+  imageAlt: "Jayden Flitton",
+};
+
+const socialLinks = [
+  { label: "Email", href: "mailto:jayden.flitton@outlook.com" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/jayden-flitton/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B4g%2BO7rfcQh2003l9DxkZng%3D%3D",
+  },
+  { label: "Resume", href: "/resume.pdf", external: true },
+];
+
 export default function Hero() {
   return (
-    <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6">
-      <p className="mb-4 text-center text-sm uppercase tracking-[0.15em] text-zinc-400 sm:text-left sm:tracking-[0.3em]">
-        Engineering • Finance • Builder • Student
-      </p>
+    <section className="mx-auto max-w-5xl px-6 py-16 lg:py-24">
+      <div className="flex flex-col gap-10 md:flex-row md:items-start md:gap-12">
+        <div className="shrink-0 overflow-hidden rounded-[1.75rem] border border-border sm:rounded-[2rem]">
+          <Image
+            src={profile.imageSrc}
+            alt={profile.imageAlt}
+            width={192}
+            height={192}
+            priority
+            className="aspect-square w-36 object-cover object-top sm:w-44 md:w-48"
+          />
+        </div>
 
-      <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-7xl">
-        Jayden Flitton
-      </h1>
+        <div className="max-w-2xl">
+          <p className="mb-3 text-sm uppercase tracking-[0.2em] text-label">
+            {profile.tagline}
+          </p>
 
-      <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-        I am building a portfolio of engineering projects, business analysis,
-        and ideas at the intersection of technology, energy, and finance.
-      </p>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            {profile.name}
+          </h1>
 
-      <div className="mt-10 flex flex-wrap gap-3 sm:gap-4">
-        <a
-          href="#projects"
-          className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950"
-        >
-          View Projects
-        </a>
+          <p className="mt-6 text-lg leading-8 text-muted">{profile.intro}</p>
 
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-semibold text-white"
-        >
-          Resume
-        </a>
-
-        <a
-          href="mailto:jayden.flitton@outlook.com"
-          className="rounded-full border border-zinc-700 px-5 py-3 text-sm font-semibold text-white"
-        >
-          Contact Me
-        </a>
+          <ul className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2">
+            {socialLinks.map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  className="text-sm text-muted-light transition-colors hover:text-ice-blue"
+                  {...(link.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

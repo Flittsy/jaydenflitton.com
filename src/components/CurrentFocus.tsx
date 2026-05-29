@@ -1,4 +1,4 @@
-import SectionHeader from "@/components/SectionHeader";
+import Section from "@/components/Section";
 
 const focusItems = [
   {
@@ -20,22 +20,20 @@ const focusItems = [
 
 export default function CurrentFocus() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24">
-      <SectionHeader label="Right Now" title="Current Focus" />
-
+    <Section eyebrow="Right Now" title="Current Focus">
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {focusItems.map((item) => (
           <article
             key={item.title}
-            className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6"
+            className="rounded-2xl border border-border bg-card p-6"
           >
             <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-zinc-400">
+            <p className="mt-3 text-sm leading-6 text-muted-light">
               {item.description}
             </p>
           </article>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

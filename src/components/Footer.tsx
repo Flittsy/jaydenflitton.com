@@ -10,11 +10,11 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800/80">
+    <footer className="border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-24">
         <SectionHeader title="Jayden Flitton" />
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-500">
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-light">
           Engineering • Finance • Projects • Writing
         </p>
 
@@ -23,7 +23,7 @@ export default function Footer() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-sm text-zinc-400 transition-colors hover:text-white"
+                className="text-sm text-muted-light transition-colors hover:text-ice-blue"
               >
                 {link.label}
               </a>

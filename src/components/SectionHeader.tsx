@@ -7,7 +7,7 @@ export default function SectionHeader({ label, title }: SectionHeaderProps) {
   return (
     <div className="max-w-2xl">
       {label ? (
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
+        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-label">
           {label}
         </p>
       ) : null}

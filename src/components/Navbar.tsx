@@ -1,5 +1,5 @@
 const navLinks = [
-  { label: "Projects", href: "#projects" },
+  { label: "Projects", href: "/projects" },
   { label: "Writing", href: "#writing" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -8,11 +8,11 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 overflow-x-hidden border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 overflow-x-hidden border-b border-border bg-background/90 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-5xl min-w-0 items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6">
         <a
           href="/"
-          className="shrink-0 whitespace-nowrap text-xs font-semibold tracking-tight text-white sm:text-sm"
+          className="shrink-0 whitespace-nowrap text-xs font-semibold tracking-tight text-foreground sm:text-sm"
         >
           Jayden Flitton
         </a>
@@ -25,7 +25,7 @@ export default function Navbar() {
             >
               <a
                 href={link.href}
-                className="text-xs text-zinc-400 transition-colors hover:text-white sm:text-sm"
+                className="text-xs text-muted-light transition-colors hover:text-ice-blue sm:text-sm"
                 {...(link.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}

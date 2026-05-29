@@ -1,15 +1,17 @@
-import SectionHeader from "@/components/SectionHeader";
+import Section from "@/components/Section";
 
 export default function Writing() {
   return (
-    <section id="writing" className="mx-auto max-w-5xl px-6 py-24">
-      <SectionHeader label="Ideas & Analysis" title="Writing" />
-
-      <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
-        This section will contain essays, ideas, and analysis — long-form
-        thinking on engineering, finance, technology, and the problems I find
-        worth exploring.
-      </p>
-    </section>
+    <Section id="writing" eyebrow="Ideas & Analysis" title="Writing">
+      <div className="mt-10 border-t border-border">
+        <div className="border-b border-border py-8">
+          <p className="max-w-3xl text-base leading-7 text-muted">
+            This section will contain essays, ideas, and analysis — long-form
+            thinking on engineering, finance, technology, and the problems I
+            find worth exploring.
+          </p>
+        </div>
+      </div>
+    </Section>
   );
 }
