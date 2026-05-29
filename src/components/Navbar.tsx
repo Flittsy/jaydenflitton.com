@@ -3,26 +3,29 @@ const navLinks = [
   { label: "Writing", href: "#writing" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
-  { label: "Resume", href: "/resume.pdf", external: true },
+  { label: "Resume", href: "/resume.pdf", external: true, hideOnMobile: true },
 ];
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-sm">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 overflow-x-hidden border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur-sm">
+      <nav className="mx-auto flex max-w-5xl min-w-0 items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6">
         <a
           href="/"
-          className="text-sm font-semibold tracking-tight text-white"
+          className="shrink-0 whitespace-nowrap text-xs font-semibold tracking-tight text-white sm:text-sm"
         >
           Jayden Flitton
         </a>
 
-        <ul className="flex items-center gap-6">
+        <ul className="flex min-w-0 shrink items-center gap-2 sm:gap-6">
           {navLinks.map((link) => (
-            <li key={link.href}>
+            <li
+              key={link.href}
+              className={link.hideOnMobile ? "max-sm:hidden" : undefined}
+            >
               <a
                 href={link.href}
-                className="text-sm text-zinc-400 transition-colors hover:text-white"
+                className="text-xs text-zinc-400 transition-colors hover:text-white sm:text-sm"
                 {...(link.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}

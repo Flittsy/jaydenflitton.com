@@ -1,3 +1,5 @@
+import SectionHeader from "@/components/SectionHeader";
+
 const focusItems = [
   {
     title: "Building technical projects",
@@ -19,13 +21,7 @@ const focusItems = [
 export default function CurrentFocus() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-24">
-      <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-        Right Now
-      </p>
-
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-        Current Focus
-      </h2>
+      <SectionHeader label="Right Now" title="Current Focus" />
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {focusItems.map((item) => (

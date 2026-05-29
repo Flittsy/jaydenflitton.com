@@ -1,11 +1,9 @@
+import SectionHeader from "@/components/SectionHeader";
+
 export default function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-5xl px-6 pb-16 pt-24">
-      <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-        Get in Touch
-      </p>
-
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Contact</h2>
+    <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
+      <SectionHeader label="Get in Touch" title="Contact" />
 
       <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300">
         Interested in collaborating, discussing an idea, or just saying hello?

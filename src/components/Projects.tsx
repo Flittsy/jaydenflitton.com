@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
+import SectionHeader from "@/components/SectionHeader";
 
 const projects = [
   {
@@ -30,11 +31,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-24">
-      <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-        Selected Work
-      </p>
-
-      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Projects</h2>
+      <SectionHeader label="Selected Work" title="Projects" />
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {projects.map((project) => (
