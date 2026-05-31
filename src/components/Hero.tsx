@@ -22,14 +22,14 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 lg:py-24">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:gap-12">
-        <div className="shrink-0 overflow-hidden rounded-[1.75rem] border border-border sm:rounded-[2rem]">
+        <div className="w-fit shrink-0 self-center md:self-start">
           <Image
             src={profile.imageSrc}
             alt={profile.imageAlt}
             width={192}
             height={192}
             priority
-            className="aspect-square w-36 object-cover object-top sm:w-44 md:w-48"
+            className="size-36 rounded-[1.75rem] object-cover object-top sm:size-44 sm:rounded-[2rem] md:size-48"
           />
         </div>
 
