@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import CurrentFocus from "@/components/CurrentFocus";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -14,7 +13,6 @@ export default function Home() {
 
       <div className="lg:pl-56">
         <Hero />
-        <CurrentFocus />
         <Projects />
         <Writing />
         <About />
