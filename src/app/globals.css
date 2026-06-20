@@ -1,19 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f3ec;
-  --foreground: #1f1b18;
-  --muted: #4a4440;
-  --muted-light: #7a7268;
-  --label: #6b4a4a;
-  --border: #e4ddd2;
-  --card: #fdfbf7;
-  --accent: #2f4f3e;
-  --accent-hover: #243d31;
-  --maroon: #6b4a4a;
-  --maroon-hover: #5a3e3e;
-  --ice-blue: #94b4c8;
-  --ice-blue-hover: #7fa0b8;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #a0a0a0;
+  --muted-light: #6b6b6b;
+  --border: #1f1f1f;
+  --card: #111111;
+  --accent: #e8e0d0;
 }
 
 @theme inline {
@@ -21,15 +15,9 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-muted-light: var(--muted-light);
-  --color-label: var(--label);
   --color-border: var(--border);
   --color-card: var(--card);
   --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-maroon: var(--maroon);
-  --color-maroon-hover: var(--maroon-hover);
-  --color-ice-blue: var(--ice-blue);
-  --color-ice-blue-hover: var(--ice-blue-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
